@@ -1,1 +1,1 @@
-web: https://axelceballes.github.io/portafolio/
+web: https://portafolio-axelceballes.vercel.app
