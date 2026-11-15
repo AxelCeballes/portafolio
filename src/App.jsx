@@ -6,6 +6,7 @@ import { Projects } from './components/sections/Projects.jsx';
 import { Stack } from './components/sections/Stack.jsx';
 import { Contact } from './components/sections/Contact.jsx';
 import { AsciiRipple } from './components/ui/AsciiRipple.jsx';
+import { SpectralDrape } from './components/ui/SpectralDrape.jsx';
 import { TechMarquee } from './components/ui/TechMarquee.jsx';
 
 export default function App() {
@@ -17,6 +18,8 @@ export default function App() {
       >
         Saltar al contenido
       </a>
+
+      <SpectralDrape />
 
       <div
         className="pointer-events-none fixed inset-0 z-0 bg-noise opacity-[0.035]"

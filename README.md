@@ -21,7 +21,8 @@ Sitio personal y portafolio profesional de **Axel Omar Ceballes**, Desarrollador
 | SEO | Meta tags, Open Graph, Twitter Card, JSON-LD (schema.org/Person), `robots.txt`, `sitemap.xml` |
 | Deploy | Vercel (framework Vite) |
 
-Sin dependencias de animación: los reveals usan `IntersectionObserver` + CSS, y el resto son
+Sin dependencias de animación: los reveals usan `IntersectionObserver` + CSS, el fondo de puntos
+3D (`SpectralDrape`) y la banda ASCII (`AsciiRipple`) son canvas 2D propios, y el resto son
 keyframes propios (`enter`, `glow`, `marquee`, `shimmer`, `blink`). Todo respeta
 `prefers-reduced-motion`.
 

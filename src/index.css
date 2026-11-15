@@ -197,6 +197,17 @@
     mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
   }
 
+  .drape-mask {
+    -webkit-mask-image:
+      linear-gradient(to bottom, transparent, #000 16%, #000 84%, transparent),
+      linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    mask-image:
+      linear-gradient(to bottom, transparent, #000 16%, #000 84%, transparent),
+      linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+  }
+
   .reveal {
     opacity: 0;
     transform: translateY(22px);
