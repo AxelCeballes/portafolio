@@ -14,7 +14,7 @@ function BrowserBar({ url }) {
         <span className="h-1.5 w-1.5 rounded-full bg-emerald-400/60" />
       </div>
       <div className="flex h-4 min-w-0 flex-1 items-center gap-1 rounded-full border border-white/[0.06] bg-white/[0.04] px-2">
-        <Icon name="shield" className="h-2 w-2 shrink-0 text-emerald-400/70" strokeWidth={2.2} />
+        <Icon name="shield" className="h-2 w-2 shrink-0 text-accent/70" strokeWidth={2.2} />
         <span className="truncate font-mono text-[8px] leading-none text-muted">{url}</span>
       </div>
     </div>
@@ -101,7 +101,7 @@ function SitecMock() {
     <div className="flex h-full flex-col gap-2 p-2.5">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1.5">
-          <span className="h-2.5 w-2.5 rounded-[3px] bg-electric/80" />
+          <span className="h-2.5 w-2.5 rounded-[3px] bg-accent/80" />
           <Bar className="h-1 w-14 bg-white/25" />
         </div>
         <div className="flex gap-1">
@@ -115,10 +115,10 @@ function SitecMock() {
           className="relative h-14 w-14 shrink-0 rounded-full p-[5px]"
           style={{
             backgroundImage:
-              'conic-gradient(#22d3ee 0 76%, rgba(255,255,255,0.07) 76% 100%)',
+              'conic-gradient(#ef4444 0 76%, rgba(255,255,255,0.07) 76% 100%)',
           }}
         >
-          <div className="flex h-full w-full items-center justify-center rounded-full bg-[#070d17]">
+          <div className="flex h-full w-full items-center justify-center rounded-full bg-[#0b0b0e]">
             <span className="font-mono text-[8px] font-medium text-accent">76%</span>
           </div>
         </div>
@@ -127,7 +127,7 @@ function SitecMock() {
           {[0, 1, 2, 3].map((i) => (
             <div key={i} className="rounded border border-white/[0.06] bg-white/[0.02] px-1.5 py-1">
               <Bar className="h-0.5 w-5" />
-              <Bar className={cn('mt-1 h-1 w-6', i % 2 ? 'bg-electric/60' : 'bg-accent/60')} />
+              <Bar className={cn('mt-1 h-1 w-6', i % 2 ? 'bg-accent-deep/70' : 'bg-accent/60')} />
             </div>
           ))}
         </div>
@@ -143,7 +143,7 @@ function SitecMock() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent/60" />
               <Bar className={cn('h-0.5', i ? 'w-10' : 'w-14')} />
             </div>
-            <span className="rounded-full bg-emerald-400/10 px-1.5 py-0.5 font-mono text-[6px] text-emerald-300/80">
+            <span className="rounded-full bg-accent/10 px-1.5 py-0.5 font-mono text-[6px] text-accent-soft/90">
               OK
             </span>
           </div>
@@ -166,13 +166,13 @@ function MuebleriaMock() {
       </div>
 
       <div className="relative flex flex-1 items-center overflow-hidden px-2.5 py-2">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-500/15 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 via-transparent to-transparent" />
         <div className="relative">
           <span className="block font-display text-[10px] font-bold leading-tight text-ink">
             Muebles con historia
           </span>
           <Bar className="mt-1.5 h-0.5 w-16" />
-          <span className="mt-2 inline-block rounded-sm bg-amber-300/80 px-2 py-1 font-mono text-[6px] font-medium text-[#1a1206]">
+          <span className="mt-2 inline-block rounded-sm bg-accent-soft/90 px-2 py-1 font-mono text-[6px] font-medium text-[#1a0808]">
             Ver catálogo
           </span>
         </div>
@@ -185,44 +185,16 @@ function MuebleriaMock() {
               className={cn(
                 'h-7 bg-gradient-to-br',
                 i === 0
-                  ? 'from-amber-400/30 to-amber-700/20'
+                  ? 'from-red-500/35 to-red-900/25'
                   : i === 1
                     ? 'from-stone-400/25 to-stone-700/20'
-                    : 'from-orange-400/25 to-amber-800/20',
+                    : 'from-orange-500/30 to-red-900/25',
               )}
             />
             <div className="space-y-1 p-1">
               <Bar className="h-0.5 w-7" />
-              <Bar className="h-0.5 w-4 bg-amber-300/40" />
+              <Bar className="h-0.5 w-4 bg-accent-soft/40" />
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function EnigmaMock() {
-  return (
-    <div className="flex h-full">
-      <div className="flex min-w-0 flex-1 flex-col justify-center gap-1 p-2.5 font-mono text-[7px] leading-relaxed sm:text-[8px]">
-        <p className="text-emerald-300/80">$ python enigma.py</p>
-        <p className="text-muted">ROTOR I · II · III</p>
-        <p className="text-ink/70">
-          INPUT&nbsp;&nbsp;<span className="text-ink">HOLA MUNDO</span>
-        </p>
-        <p className="text-ink/70">OUTPUT</p>
-        <p className="break-all text-accent">XQZP LKJHG</p>
-        <p className="mt-1 text-emerald-300/70">✓ 5 algoritmos reversibles</p>
-      </div>
-
-      <div className="hidden w-[30%] shrink-0 flex-col items-center justify-center gap-1.5 border-l border-white/[0.06] bg-white/[0.02] p-2 sm:flex">
-        {[0, 1, 2].map((i) => (
-          <div key={i} className="flex w-full items-center gap-1">
-            <span className="h-1 w-1 rounded-full bg-accent/70" />
-            <span className="h-2.5 flex-1 rounded-[2px] border border-white/10 bg-white/[0.03] font-mono text-[5px] leading-[10px] text-muted">
-              &nbsp;{['Q', 'W', 'E'][i]}
-            </span>
           </div>
         ))}
       </div>
@@ -234,7 +206,6 @@ const mocks = {
   lotus: LotusMock,
   sitec: SitecMock,
   muebleria: MuebleriaMock,
-  enigma: EnigmaMock,
 };
 
 export function ProjectCover({ project, className }) {
@@ -262,7 +233,7 @@ export function ProjectCover({ project, className }) {
   return (
     <div
       className={cn(
-        'relative aspect-video w-full overflow-hidden rounded-2xl border border-white/[0.08] bg-[#060a12]',
+        'relative aspect-video w-full overflow-hidden rounded-2xl border border-white/[0.08] bg-[#08080b]',
         className,
       )}
     >
@@ -272,7 +243,7 @@ export function ProjectCover({ project, className }) {
 
       <div className="relative flex h-full flex-col p-2.5 sm:p-3.5">
         <BrowserBar url={project.demo ? project.demo.replace('https://', '') : project.name.toLowerCase()} />
-        <div className="mt-2.5 min-h-0 flex-1 overflow-hidden rounded-lg border border-white/[0.07] bg-[#050911]/85">
+        <div className="mt-2.5 min-h-0 flex-1 overflow-hidden rounded-lg border border-white/[0.07] bg-[#08080b]/85">
           <Mock />
         </div>
       </div>

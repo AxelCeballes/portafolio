@@ -11,8 +11,8 @@ export function About() {
         <SectionHeading
           index="01"
           eyebrow="Sobre mí"
-          title="De resolver problemas con las manos a hacerlo con código."
-          description="Perfil técnico, criterio operativo y formación Full Stack: una combinación pensada para construir herramientas que la gente realmente usa."
+          title="Software a medida para operaciones reales."
+          description="Perfil técnico y formación Full Stack orientados a construir herramientas claras, medibles y que la gente realmente usa."
         />
 
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">

@@ -5,6 +5,8 @@ import { About } from './components/sections/About.jsx';
 import { Projects } from './components/sections/Projects.jsx';
 import { Stack } from './components/sections/Stack.jsx';
 import { Contact } from './components/sections/Contact.jsx';
+import { AsciiRipple } from './components/ui/AsciiRipple.jsx';
+import { TechMarquee } from './components/ui/TechMarquee.jsx';
 
 export default function App() {
   return (
@@ -25,7 +27,9 @@ export default function App() {
 
       <main id="contenido" className="relative">
         <Hero />
+        <TechMarquee />
         <About />
+        <AsciiRipple />
         <Projects />
         <Stack />
         <Contact />

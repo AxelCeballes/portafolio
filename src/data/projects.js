@@ -9,7 +9,7 @@ export const projects = [
     year: '2025',
     featured: true,
     cover: 'lotus',
-    accent: 'from-cyan-400/25 via-sky-500/10 to-transparent',
+    accent: 'from-red-500/25 via-rose-600/15 to-transparent',
     description:
       'Sistema web de gestión industrial y control de pañol para la empresa metalúrgica FALMET. Incluye seguimiento de herramientas y personal mediante escaneo de códigos de barras, tarjetas NFC y asistencia con IA.',
     bullets: [
@@ -29,7 +29,7 @@ export const projects = [
     status: 'Desplegado',
     year: '2025',
     cover: 'sitec',
-    accent: 'from-blue-500/25 via-indigo-500/10 to-transparent',
+    accent: 'from-rose-500/22 via-red-700/12 to-transparent',
     description:
       'Plataforma web de control de asistencia de personal e inventario de herramientas, con panel administrativo en tiempo real y lectura de códigos de barras.',
     stack: ['React', 'Vite', 'Backend API'],
@@ -44,27 +44,11 @@ export const projects = [
     status: 'Desplegado',
     year: '2025',
     cover: 'muebleria',
-    accent: 'from-amber-400/20 via-orange-500/10 to-transparent',
+    accent: 'from-orange-500/20 via-red-600/12 to-transparent',
     description:
       'E-commerce Full Stack completo con catálogo dinámico, carrito de compras, gestión de productos y base de datos en la nube.',
     stack: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB Atlas'],
     demo: 'https://muebleria-jota-v3.vercel.app',
     repo: 'https://github.com/AxelCeballes/MuebleriaJota_v3',
-  },
-  {
-    id: 'enigma',
-    index: '04',
-    name: 'Cifrador Criptográfico & Emulador Enigma',
-    tagline: 'Criptografía histórica desde la terminal',
-    status: 'Proyecto de formación',
-    year: '2024',
-    cover: 'enigma',
-    accent: 'from-emerald-400/20 via-teal-500/10 to-transparent',
-    description:
-      'Aplicación de terminal en Python que emula una máquina Enigma histórica e implementa cinco algoritmos reversibles de encriptación de texto.',
-    stack: ['Python', 'Criptografía', 'CLI'],
-    demo: null,
-    repo: null,
-    note: 'Proyecto de laboratorio ejecutado en terminal. Código disponible a pedido.',
   },
 ];

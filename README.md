@@ -6,7 +6,7 @@ Sitio personal y portafolio profesional de **Axel Omar Ceballes**, Desarrollador
 > Rediseño completo del sitio anterior: se reemplazó el `index.html` monolítico por una aplicación
 > React + Vite con componentes reutilizables, Tailwind CSS v4 y contenido centralizado en datos.
 
-**Demo:** https://portafolio-axelceballes.vercel.app
+**Demo:** https://axelceballes.vercel.app
 
 ---
 
@@ -21,14 +21,16 @@ Sitio personal y portafolio profesional de **Axel Omar Ceballes**, Desarrollador
 | SEO | Meta tags, Open Graph, Twitter Card, JSON-LD (schema.org/Person), `robots.txt`, `sitemap.xml` |
 | Deploy | Vercel (framework Vite) |
 
-Sin dependencias de animación: los reveals usan `IntersectionObserver` + CSS, y respetan
+Sin dependencias de animación: los reveals usan `IntersectionObserver` + CSS, y el resto son
+keyframes propios (`enter`, `glow`, `marquee`, `shimmer`, `blink`). Todo respeta
 `prefers-reduced-motion`.
 
 ## Características
 
-- Dark mode por defecto con acentos cian/azul eléctrico y estética minimalista.
+- Dark mode por defecto con paleta negro y rojo, estética minimalista y alto contraste.
 - Navbar fija con scroll suave, sección activa, barra de progreso y menú mobile accesible.
-- Hero con CTAs (Ver proyectos / Descargar CV / Contactar) y tarjeta de código.
+- Hero con CTAs (Ver proyectos / Descargar CV / Contactar), tarjeta de código y entrada animada.
+- Marquee de tecnologías con pausa al interactuar y copia duplicada oculta para lectores de pantalla.
 - Sobre mí con formación ITBA, perfil técnico y diferenciales (hardware, operaciones, soporte).
 - Proyectos con portadas, stack, estado, demo en vivo y repositorio.
 - Stack técnico organizado por categorías.
@@ -60,7 +62,7 @@ Sin dependencias de animación: los reveals usan `IntersectionObserver` + CSS, y
     ├── components/
     │   ├── layout/             # Navbar, Footer
     │   ├── sections/           # Hero, About, Projects, Stack, Contact
-    │   └── ui/                 # Button, Icon, SectionHeading, Reveal, ProjectCover
+    │   └── ui/                 # Button, Icon, SectionHeading, Reveal, ProjectCover, TechMarquee
     ├── data/
     │   ├── profile.js          # nombre, rol, links, textos y highlights
     │   ├── projects.js         # proyectos, stack, demo y repo
@@ -153,8 +155,14 @@ Si cambiás el dominio, actualizá `og:url`, `og:image`, `canonical`, el JSON-LD
 
 ### 4. Dominio
 
-Opcional, desde **Settings → Domains** en Vercel. Después de conectarlo, reemplazar
-`https://portafolio-axelceballes.vercel.app` en los archivos anteriores.
+El sitio se publica en `https://axelceballes.vercel.app`, el dominio gratuito de Vercel. Ese nombre
+sale del **Project Name** del proyecto en Vercel: para conservarlo, el proyecto debe llamarse
+`axelceballes`.
+
+Para usar un dominio propio, comprarlo y agregarlo desde **Settings → Domains**. Después hay que
+reemplazar `https://axelceballes.vercel.app` en `index.html`, `src/data/profile.js`,
+`public/robots.txt`, `public/sitemap.xml`, `scripts/cv.html` y `scripts/og.html`, y regenerar el CV y
+la imagen Open Graph.
 
 ## Publicar los cambios
 

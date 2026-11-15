@@ -62,7 +62,7 @@ export function Navbar() {
     >
       <div className="absolute inset-x-0 top-0 h-[2px]">
         <div
-          className="h-full bg-gradient-to-r from-accent via-cyan-300 to-electric"
+          className="h-full bg-gradient-to-r from-accent via-accent-soft to-accent-deep"
           style={{ width: `${progress * 100}%` }}
         />
       </div>

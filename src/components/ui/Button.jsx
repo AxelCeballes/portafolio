@@ -2,7 +2,7 @@ import { cn } from '../../lib/cn';
 import { Icon } from './Icon.jsx';
 
 const base =
-  'group inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-300 disabled:pointer-events-none disabled:opacity-60';
+  'group inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-300 active:scale-[0.985] disabled:pointer-events-none disabled:opacity-60';
 
 const sizes = {
   md: 'px-5 py-3 text-sm',
@@ -11,7 +11,7 @@ const sizes = {
 
 const variants = {
   primary:
-    'bg-accent text-night shadow-[0_16px_40px_-18px_rgba(34,211,238,0.85)] hover:bg-accent-soft hover:shadow-[0_20px_50px_-16px_rgba(34,211,238,0.9)]',
+    'btn-shine bg-accent text-night shadow-[0_16px_40px_-18px_rgba(239,68,68,0.85)] hover:bg-accent-soft hover:shadow-[0_20px_50px_-16px_rgba(239,68,68,0.9)]',
   secondary:
     'border border-line bg-white/[0.03] text-ink hover:border-accent/45 hover:bg-white/[0.06]',
   outline: 'border border-accent/40 text-accent hover:bg-accent/10',

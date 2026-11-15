@@ -6,17 +6,17 @@ export const profile = {
   email: 'axelceballes9@gmail.com',
   github: 'https://github.com/AxelCeballes',
   linkedin: 'https://www.linkedin.com/in/ceballesaxel79/',
-  siteUrl: 'https://portafolio-axelceballes.vercel.app/',
+  siteUrl: 'https://axelceballes.vercel.app/',
   cvUrl: '/CV-Axel-Ceballes.pdf',
   availability: 'Disponible para proyectos y roles full time',
   education: 'Instituto Tecnológico de Buenos Aires (ITBA)',
   heroLead:
     'Desarrollador Full Stack con formación en ITBA y experiencia resolviendo problemas reales mediante software a medida, sistemas de gestión e interfaces modernas.',
   heroSupport:
-    'Combino el desarrollo web con una base sólida en hardware, mantenimiento técnico y operaciones: entiendo el problema en el taller y lo resuelvo en el código.',
+    'Trabajo con React, Node.js y MongoDB construyendo sistemas de gestión, paneles en tiempo real y e-commerce que se usan todos los días en producción.',
   summary: [
     'Soy Axel Omar Ceballes, desarrollador web Full Stack radicado en Buenos Aires. Mi formación en el Instituto Tecnológico de Buenos Aires (ITBA) y mi recorrido técnico me llevaron a construir sistemas de gestión, control de inventario, asistencia de personal y herramientas internas que reemplazan planillas y procesos manuales.',
-    'Antes de escribir código trabajé años en mantenimiento, operaciones y soporte técnico. Esa base —diagnosticar, entender el problema, documentarlo y resolverlo— es la misma que aplico hoy al desarrollar: escuchar al usuario, diseñar la solución y entregarla funcionando en producción.',
+    'Mi forma de trabajar combina criterio operativo con desarrollo: relevo el proceso actual, detecto dónde se pierde tiempo y diseño la solución junto al usuario. Documento cada entrega, acompaño la puesta en marcha y la ajusto con datos de uso reales.',
   ],
 };
 
@@ -68,7 +68,7 @@ export const highlights = [
 ];
 
 export const facts = [
-  { value: '4+', label: 'Proyectos desplegados' },
+  { value: '3', label: 'Proyectos desplegados' },
   { value: 'Full Stack', label: 'React · Node.js · MongoDB' },
   { value: 'ITBA', label: 'Formación profesional' },
   { value: 'Buenos Aires', label: 'Argentina · Remoto' },

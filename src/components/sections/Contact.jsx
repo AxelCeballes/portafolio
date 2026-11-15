@@ -105,8 +105,8 @@ export function Contact() {
 
   return (
     <section id="contacto" className="relative overflow-hidden border-t border-line/60 py-24 sm:py-28">
-      <div className="pointer-events-none absolute -right-32 top-10 h-96 w-96 rounded-full bg-electric/10 blur-[120px]" aria-hidden="true" />
-      <div className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-accent/[0.07] blur-[110px]" aria-hidden="true" />
+      <div className="pointer-events-none absolute -right-32 top-10 h-96 w-96 animate-glow rounded-full bg-accent/10 blur-[120px]" aria-hidden="true" />
+      <div className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 animate-glow-slow rounded-full bg-accent-deep/[0.12] blur-[110px]" aria-hidden="true" />
 
       <div className="container-page relative">
         <SectionHeading

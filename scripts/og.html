@@ -8,27 +8,27 @@
       html, body { width: 1200px; height: 630px; overflow: hidden; }
       body {
         position: relative;
-        background: #05070d;
-        color: #e9eefb;
+        background: #070708;
+        color: #f4f4f6;
         font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       }
       .grid {
         position: absolute; inset: 0;
         background-image:
-          linear-gradient(to right, rgba(148, 163, 189, 0.08) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(148, 163, 189, 0.08) 1px, transparent 1px);
+          linear-gradient(to right, rgba(163, 163, 173, 0.08) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(163, 163, 173, 0.08) 1px, transparent 1px);
         background-size: 56px 56px;
         -webkit-mask-image: radial-gradient(ellipse 80% 75% at 35% 40%, #000 25%, transparent 80%);
         mask-image: radial-gradient(ellipse 80% 75% at 35% 40%, #000 25%, transparent 80%);
       }
-      .glow-cyan {
+      .glow-red {
         position: absolute; width: 620px; height: 420px; left: -160px; top: -120px;
-        background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 65%);
+        background: radial-gradient(circle, rgba(239, 68, 68, 0.22), transparent 65%);
         filter: blur(30px);
       }
-      .glow-blue {
+      .glow-deep {
         position: absolute; width: 560px; height: 460px; right: -120px; bottom: -100px;
-        background: radial-gradient(circle, rgba(59, 130, 246, 0.2), transparent 65%);
+        background: radial-gradient(circle, rgba(185, 28, 28, 0.24), transparent 65%);
         filter: blur(30px);
       }
       .wrap {
@@ -39,13 +39,13 @@
       .brand { display: flex; align-items: center; gap: 14px; }
       .logo {
         width: 54px; height: 54px; border-radius: 15px;
-        border: 1px solid rgba(34, 211, 238, 0.35);
-        background: rgba(34, 211, 238, 0.1);
+        border: 1px solid rgba(239, 68, 68, 0.35);
+        background: rgba(239, 68, 68, 0.1);
         display: flex; align-items: center; justify-content: center;
-        color: #22d3ee; font-weight: 800; font-size: 21px; letter-spacing: -0.02em;
+        color: #ef4444; font-weight: 800; font-size: 21px; letter-spacing: -0.02em;
       }
       .brand-name { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; }
-      .brand-name span { color: #22d3ee; }
+      .brand-name span { color: #ef4444; }
       h1 {
         margin-top: 52px;
         font-size: 82px;
@@ -54,7 +54,7 @@
         letter-spacing: -0.05em;
       }
       .grad {
-        background: linear-gradient(100deg, #a5f3fc 0%, #22d3ee 38%, #3b82f6 100%);
+        background: linear-gradient(100deg, #fca5a5 0%, #ef4444 38%, #b91c1c 100%);
         -webkit-background-clip: text; background-clip: text; color: transparent;
       }
       .role {
@@ -63,21 +63,21 @@
         font-size: 16px;
         letter-spacing: 0.16em;
         text-transform: uppercase;
-        color: #22d3ee;
+        color: #ef4444;
       }
       .lead {
         margin-top: 20px;
         max-width: 540px;
         font-size: 19px;
         line-height: 1.6;
-        color: #94a3bd;
+        color: #a2a2ac;
       }
       .chips { margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap; }
       .chip {
         font-family: Consolas, monospace;
         font-size: 12.5px;
-        color: #cbd5e1;
-        border: 1px solid #1b2639;
+        color: #d4d4d8;
+        border: 1px solid #27272d;
         background: rgba(255, 255, 255, 0.02);
         padding: 9px 13px;
         border-radius: 999px;
@@ -86,39 +86,39 @@
         margin-top: 20px;
         font-family: Consolas, monospace;
         font-size: 12.5px;
-        color: #64748b;
+        color: #71717a;
       }
       .right { width: 410px; display: flex; align-items: center; }
       .card {
         width: 100%;
-        border: 1px solid #1b2639;
+        border: 1px solid #27272d;
         border-radius: 22px;
-        background: rgba(11, 17, 28, 0.82);
+        background: rgba(16, 16, 20, 0.85);
         padding: 6px;
         box-shadow: 0 40px 90px -30px #000;
       }
-      .card-inner { border-radius: 17px; background: #050911; overflow: hidden; }
+      .card-inner { border-radius: 17px; background: #08080b; overflow: hidden; }
       .bar {
         display: flex; align-items: center; gap: 6px;
         padding: 14px 16px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       }
       .dot { width: 8px; height: 8px; border-radius: 50%; }
-      .file { margin: 0 auto; font-family: Consolas, monospace; font-size: 11px; color: #64748b; }
-      .live { width: 7px; height: 7px; border-radius: 50%; background: #34d399; }
+      .file { margin: 0 auto; font-family: Consolas, monospace; font-size: 11px; color: #71717a; }
+      .live { width: 7px; height: 7px; border-radius: 50%; background: #ef4444; }
       pre {
         padding: 22px 20px;
         font-family: Consolas, 'Courier New', monospace;
         font-size: 12.5px;
         line-height: 1.9;
         white-space: pre;
-        color: #e9eefb;
+        color: #f4f4f6;
       }
-      .k { color: #22d3ee; }
-      .p { color: #64748b; }
-      .s { color: #6ee7b7; }
-      .b { color: #fcd34d; }
-      .n { color: #3b82f6; }
+      .k { color: #f87171; }
+      .p { color: #71717a; }
+      .s { color: #fecaca; }
+      .b { color: #fca5a5; }
+      .n { color: #ef4444; }
       .foot {
         display: flex; align-items: center; justify-content: space-between;
         padding: 13px 16px;
@@ -126,14 +126,14 @@
         font-family: Consolas, monospace;
         font-size: 10px;
       }
-      .ok { color: #6ee7b7; }
-      .ver { color: #64748b; }
+      .ok { color: #fca5a5; }
+      .ver { color: #71717a; }
     </style>
   </head>
   <body>
     <div class="grid"></div>
-    <div class="glow-cyan"></div>
-    <div class="glow-blue"></div>
+    <div class="glow-red"></div>
+    <div class="glow-deep"></div>
 
     <div class="wrap">
       <div class="left">
@@ -156,7 +156,7 @@
           <span class="chip">Python</span>
           <span class="chip">Buenos Aires, AR</span>
         </div>
-        <div class="url">portafolio-axelceballes.vercel.app</div>
+        <div class="url">axelceballes.vercel.app</div>
       </div>
 
       <div class="right">

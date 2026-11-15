@@ -149,7 +149,7 @@ function ProjectCard({ project }) {
         </div>
 
         <h3 className="mt-3 text-lg font-bold leading-snug sm:text-xl">{project.name}</h3>
-        <p className="mt-1 font-mono text-[10.5px] text-accent/90">{project.tagline}</p>
+        <p className="mt-1 font-mono text-[10.5px] text-accent">{project.tagline}</p>
         <p className="mt-3 line-clamp-3 text-[13px] leading-relaxed text-muted">
           {project.description}
         </p>
