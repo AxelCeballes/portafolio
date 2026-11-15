@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>CV — Axel Omar Ceballes</title>
+    <style>
+      @page { size: A4; margin: 0; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 14mm 15mm;
+        background: #fff;
+        color: #101828;
+        font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+        font-size: 9.6pt;
+        line-height: 1.45;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 12mm;
+        padding-bottom: 4mm;
+        border-bottom: 2px solid #0891b2;
+      }
+      h1 { font-size: 24pt; line-height: 1; letter-spacing: -0.02em; }
+      .role { margin-top: 1.6mm; color: #0e7490; font-size: 10.5pt; font-weight: 600; }
+      .contact { text-align: right; font-size: 8.6pt; color: #475467; line-height: 1.7; }
+      .contact strong { color: #101828; }
+      .summary { margin-top: 4mm; color: #344054; font-size: 9.4pt; }
+      .section { margin-top: 5mm; }
+      .section h2 {
+        font-size: 9pt;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #0e7490;
+        padding-bottom: 1.2mm;
+        border-bottom: 1px solid #d0d5dd;
+        margin-bottom: 2.6mm;
+      }
+      .job { margin-bottom: 3.2mm; }
+      .job-head { display: flex; justify-content: space-between; gap: 6mm; }
+      .job-title { font-weight: 700; font-size: 10pt; }
+      .job-meta { color: #0e7490; font-size: 8.5pt; font-weight: 600; white-space: nowrap; }
+      .job ul { margin: 1mm 0 0 4mm; }
+      .job li { margin-bottom: 0.6mm; color: #344054; }
+      .tags { color: #667085; font-size: 8.4pt; margin-top: 0.6mm; }
+      .cols { display: flex; gap: 8mm; }
+      .col { flex: 1; }
+      .skill-row { display: flex; gap: 2.5mm; margin-bottom: 1.8mm; font-size: 8.8pt; }
+      .skill-row strong { width: 26mm; flex-shrink: 0; color: #101828; }
+      .skill-row span { color: #475467; }
+      .edu { margin-bottom: 2.2mm; }
+      .edu strong { font-size: 9.6pt; }
+      .edu p { color: #475467; font-size: 8.8pt; }
+      .foot {
+        margin-top: 5mm;
+        padding-top: 2mm;
+        border-top: 1px solid #d0d5dd;
+        display: flex;
+        justify-content: space-between;
+        color: #98a2b3;
+        font-size: 7.8pt;
+      }
+      a { color: inherit; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div>
+        <h1>Axel Omar Ceballes</h1>
+        <div class="role">Desarrollador Web Full Stack</div>
+      </div>
+      <div class="contact">
+        <strong>Buenos Aires, Argentina</strong><br />
+        axelceballes9@gmail.com<br />
+        github.com/AxelCeballes<br />
+        linkedin.com/in/ceballesaxel79
+      </div>
+    </div>
+
+    <p class="summary">
+      Desarrollador Full Stack con formación en ITBA y experiencia resolviendo problemas reales
+      mediante software a medida, sistemas de gestión e interfaces modernas. Combino el desarrollo
+      web con una base sólida en hardware, mantenimiento técnico y operaciones: entiendo el problema
+      en el taller y lo resuelvo en el código.
+    </p>
+
+    <section class="section">
+      <h2>Proyectos destacados</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-title">L.O.T.U.S. Solutions — Sistema de gestión industrial</span>
+          <span class="job-meta">FALMET · 2025</span>
+        </div>
+        <ul>
+          <li>Control de pañol y trazabilidad de herramientas con códigos de barras y tarjetas NFC.</li>
+          <li>Asistencia de personal y panel operativo con métricas; integración de hardware y asistencia con IA.</li>
+        </ul>
+        <div class="tags">React · Node.js · MongoDB · NFC · Lectores de códigos de barras</div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-title">S.I.T.E.C. — Proyecto JACK SOLUTIONS</span>
+          <span class="job-meta">2025</span>
+        </div>
+        <ul>
+          <li>Plataforma de control de asistencia de personal e inventario de herramientas.</li>
+          <li>Panel administrativo en tiempo real con lectura de códigos de barras.</li>
+        </ul>
+        <div class="tags">React · Vite · APIs REST</div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-title">Mueblería Jota v3 — E-commerce Full Stack</span>
+          <span class="job-meta">2025</span>
+        </div>
+        <ul>
+          <li>Catálogo dinámico, carrito de compras y gestión de productos con base de datos en la nube.</li>
+        </ul>
+        <div class="tags">React · Vite · Node.js · Express · MongoDB Atlas</div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-title">Cifrador criptográfico &amp; Emulador Enigma</span>
+          <span class="job-meta">2024</span>
+        </div>
+        <ul>
+          <li>Aplicación de terminal que emula una máquina Enigma e implementa cinco algoritmos reversibles de encriptación.</li>
+        </ul>
+        <div class="tags">Python · Criptografía básica · CLI</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Stack técnico</h2>
+      <div class="cols">
+        <div class="col">
+          <div class="skill-row"><strong>Frontend</strong><span>HTML5, CSS3, JavaScript (ES6+), React, Vite, Tailwind CSS, diseño responsive</span></div>
+          <div class="skill-row"><strong>Backend</strong><span>Node.js, Express, APIs REST, Python</span></div>
+        </div>
+        <div class="col">
+          <div class="skill-row"><strong>Bases de datos</strong><span>MongoDB Atlas</span></div>
+          <div class="skill-row"><strong>Herramientas</strong><span>Git, GitHub, Vercel, Linux (Kali / CLI)</span></div>
+          <div class="skill-row"><strong>Soporte</strong><span>Soporte técnico y diagnóstico de hardware</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Formación</h2>
+      <div class="cols">
+        <div class="col">
+          <div class="edu">
+            <strong>Desarrollo Web Full Stack</strong>
+            <p>Instituto Tecnológico de Buenos Aires (ITBA)</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="edu">
+            <strong>Idiomas</strong>
+            <p>Español nativo · Inglés intermedio</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="foot">
+      <span>Portafolio: portafolio-axelceballes.vercel.app</span>
+      <span>Axel Omar Ceballes · Buenos Aires, Argentina</span>
+    </div>
+  </body>
+</html>

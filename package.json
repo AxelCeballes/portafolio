@@ -1,0 +1,25 @@
+{
+  "name": "axel-ceballes-portfolio",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Portafolio profesional de Axel Omar Ceballes — Desarrollador Web Full Stack",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.1.11",
+    "vite": "^5.4.19"
+  }
+}

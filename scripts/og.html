@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>OG image — Axel Ceballes</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1200px; height: 630px; overflow: hidden; }
+      body {
+        position: relative;
+        background: #05070d;
+        color: #e9eefb;
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      }
+      .grid {
+        position: absolute; inset: 0;
+        background-image:
+          linear-gradient(to right, rgba(148, 163, 189, 0.08) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(148, 163, 189, 0.08) 1px, transparent 1px);
+        background-size: 56px 56px;
+        -webkit-mask-image: radial-gradient(ellipse 80% 75% at 35% 40%, #000 25%, transparent 80%);
+        mask-image: radial-gradient(ellipse 80% 75% at 35% 40%, #000 25%, transparent 80%);
+      }
+      .glow-cyan {
+        position: absolute; width: 620px; height: 420px; left: -160px; top: -120px;
+        background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 65%);
+        filter: blur(30px);
+      }
+      .glow-blue {
+        position: absolute; width: 560px; height: 460px; right: -120px; bottom: -100px;
+        background: radial-gradient(circle, rgba(59, 130, 246, 0.2), transparent 65%);
+        filter: blur(30px);
+      }
+      .wrap {
+        position: relative; display: flex; gap: 46px;
+        height: 100%; padding: 58px 64px 50px;
+      }
+      .left { flex: 1; display: flex; flex-direction: column; }
+      .brand { display: flex; align-items: center; gap: 14px; }
+      .logo {
+        width: 54px; height: 54px; border-radius: 15px;
+        border: 1px solid rgba(34, 211, 238, 0.35);
+        background: rgba(34, 211, 238, 0.1);
+        display: flex; align-items: center; justify-content: center;
+        color: #22d3ee; font-weight: 800; font-size: 21px; letter-spacing: -0.02em;
+      }
+      .brand-name { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; }
+      .brand-name span { color: #22d3ee; }
+      h1 {
+        margin-top: 52px;
+        font-size: 82px;
+        line-height: 0.94;
+        font-weight: 800;
+        letter-spacing: -0.05em;
+      }
+      .grad {
+        background: linear-gradient(100deg, #a5f3fc 0%, #22d3ee 38%, #3b82f6 100%);
+        -webkit-background-clip: text; background-clip: text; color: transparent;
+      }
+      .role {
+        margin-top: 22px;
+        font-family: Consolas, monospace;
+        font-size: 16px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #22d3ee;
+      }
+      .lead {
+        margin-top: 20px;
+        max-width: 540px;
+        font-size: 19px;
+        line-height: 1.6;
+        color: #94a3bd;
+      }
+      .chips { margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap; }
+      .chip {
+        font-family: Consolas, monospace;
+        font-size: 12.5px;
+        color: #cbd5e1;
+        border: 1px solid #1b2639;
+        background: rgba(255, 255, 255, 0.02);
+        padding: 9px 13px;
+        border-radius: 999px;
+      }
+      .url {
+        margin-top: 20px;
+        font-family: Consolas, monospace;
+        font-size: 12.5px;
+        color: #64748b;
+      }
+      .right { width: 410px; display: flex; align-items: center; }
+      .card {
+        width: 100%;
+        border: 1px solid #1b2639;
+        border-radius: 22px;
+        background: rgba(11, 17, 28, 0.82);
+        padding: 6px;
+        box-shadow: 0 40px 90px -30px #000;
+      }
+      .card-inner { border-radius: 17px; background: #050911; overflow: hidden; }
+      .bar {
+        display: flex; align-items: center; gap: 6px;
+        padding: 14px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .dot { width: 8px; height: 8px; border-radius: 50%; }
+      .file { margin: 0 auto; font-family: Consolas, monospace; font-size: 11px; color: #64748b; }
+      .live { width: 7px; height: 7px; border-radius: 50%; background: #34d399; }
+      pre {
+        padding: 22px 20px;
+        font-family: Consolas, 'Courier New', monospace;
+        font-size: 12.5px;
+        line-height: 1.9;
+        white-space: pre;
+        color: #e9eefb;
+      }
+      .k { color: #22d3ee; }
+      .p { color: #64748b; }
+      .s { color: #6ee7b7; }
+      .b { color: #fcd34d; }
+      .n { color: #3b82f6; }
+      .foot {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 13px 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        font-family: Consolas, monospace;
+        font-size: 10px;
+      }
+      .ok { color: #6ee7b7; }
+      .ver { color: #64748b; }
+    </style>
+  </head>
+  <body>
+    <div class="grid"></div>
+    <div class="glow-cyan"></div>
+    <div class="glow-blue"></div>
+
+    <div class="wrap">
+      <div class="left">
+        <div class="brand">
+          <div class="logo">AC</div>
+          <div class="brand-name">axel<span>.</span>dev</div>
+        </div>
+
+        <h1>Axel Omar<br /><span class="grad">Ceballes</span></h1>
+        <div class="role">Desarrollador Web Full Stack</div>
+        <p class="lead">
+          Sistemas de gestión, paneles en tiempo real y e-commerce. Software a medida con React,
+          Node.js y MongoDB.
+        </p>
+
+        <div class="chips">
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">Python</span>
+          <span class="chip">Buenos Aires, AR</span>
+        </div>
+        <div class="url">portafolio-axelceballes.vercel.app</div>
+      </div>
+
+      <div class="right">
+        <div class="card">
+          <div class="card-inner">
+            <div class="bar">
+              <span class="dot" style="background: rgba(251, 113, 133, 0.7)"></span>
+              <span class="dot" style="background: rgba(251, 191, 36, 0.7)"></span>
+              <span class="dot" style="background: rgba(52, 211, 153, 0.7)"></span>
+              <span class="file">axel.config.js</span>
+              <span class="live"></span>
+            </div>
+            <pre><span class="n">const</span> axel <span class="p">=</span> <span class="p">{</span>
+  <span class="k">rol</span><span class="p">:</span> <span class="s">'Full Stack'</span><span class="p">,</span>
+  <span class="k">base</span><span class="p">:</span> <span class="s">'Buenos Aires'</span><span class="p">,</span>
+  <span class="k">formacion</span><span class="p">:</span> <span class="s">'ITBA'</span><span class="p">,</span>
+  <span class="k">stack</span><span class="p">:</span> <span class="p">[</span><span class="s">'React'</span><span class="p">,</span> <span class="s">'Node'</span><span class="p">],</span>
+  <span class="k">extra</span><span class="p">:</span> <span class="p">[</span><span class="s">'hardware'</span><span class="p">,</span> <span class="s">'NFC'</span><span class="p">],</span>
+  <span class="k">disponible</span><span class="p">:</span> <span class="b">true</span>
+<span class="p">};</span></pre>
+            <div class="foot">
+              <span class="ok">✓ build successful</span>
+              <span class="ver">v2.0.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

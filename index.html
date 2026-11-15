@@ -1,711 +1,92 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Axel Ceballes — De las herramientas al código</title>
-<meta name="description" content="Portfolio de Axel Ceballes: en transición de trabajo físico hacia IT / desarrollo. Full Stack, soporte técnico, community management.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg: #0b0b0a;
-    --bg-raised: #131311;
-    --ink: #f1ede4;
-    --ink-dim: #cfc9ba;
-    --steel: #8c887f;
-    --line: #2b2a26;
-    --hanko: #b3241c;
-    --hanko-dim: #7a1912;
-  }
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  *{margin:0;padding:0;box-sizing:border-box;}
+    <title>Axel Ceballes | Desarrollador Web Full Stack</title>
+    <meta
+      name="description"
+      content="Desarrollador Web Full Stack en Buenos Aires. Sistemas de gestión, paneles en tiempo real y e-commerce con React, Node.js y MongoDB. Formación en ITBA."
+    />
+    <meta name="author" content="Axel Omar Ceballes" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#05070d" />
+    <link rel="canonical" href="https://portafolio-axelceballes.vercel.app/" />
 
-  html{scroll-behavior:smooth;}
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Axel Ceballes" />
+    <meta property="og:url" content="https://portafolio-axelceballes.vercel.app/" />
+    <meta property="og:title" content="Axel Ceballes | Desarrollador Web Full Stack" />
+    <meta
+      property="og:description"
+      content="Sistemas de gestión, paneles en tiempo real y e-commerce. React, Node.js y MongoDB. Buenos Aires, Argentina."
+    />
+    <meta property="og:image" content="https://portafolio-axelceballes.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Axel Ceballes — Desarrollador Web Full Stack" />
 
-  body{
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Work Sans', sans-serif;
-    font-weight:400;
-    line-height:1.6;
-    overflow-x:hidden;
-  }
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Axel Ceballes | Desarrollador Web Full Stack" />
+    <meta
+      name="twitter:description"
+      content="Sistemas de gestión, paneles en tiempo real y e-commerce. React, Node.js y MongoDB. Buenos Aires, Argentina."
+    />
+    <meta name="twitter:image" content="https://portafolio-axelceballes.vercel.app/og-image.png" />
 
-  ::selection{background:var(--hanko);color:var(--ink);}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
 
-  a{color:inherit;text-decoration:none;}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  .mono{
-    font-family:'JetBrains Mono', monospace;
-    letter-spacing:0.02em;
-  }
-
-  .display{
-    font-family:'Bebas Neue', sans-serif;
-    font-weight:400;
-    letter-spacing:0.01em;
-    text-transform:uppercase;
-  }
-
-  .wrap{
-    max-width:1080px;
-    margin:0 auto;
-    padding:0 32px;
-  }
-
-  .eyebrow{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.72rem;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    color:var(--hanko);
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:18px;
-  }
-  .eyebrow::before{
-    content:"";
-    width:7px;height:7px;
-    background:var(--hanko);
-    display:inline-block;
-  }
-
-  /* ---------- HANKO STAMP (signature element) ---------- */
-  .hanko-stamp{
-    width:54px;height:54px;
-    border:2px solid var(--hanko);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
-    transform:rotate(-3deg);
-    background:rgba(179,36,28,0.06);
-  }
-  .hanko-stamp span{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.65rem;
-    color:var(--hanko);
-    line-height:1.1;
-    text-align:center;
-    letter-spacing:0.05em;
-  }
-
-  /* ---------- NAV ---------- */
-  header{
-    position:fixed;
-    top:0;left:0;right:0;
-    z-index:100;
-    background:rgba(11,11,10,0.86);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  nav{
-    max-width:1080px;
-    margin:0 auto;
-    padding:18px 32px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-  }
-  nav .brand{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.85rem;
-    letter-spacing:0.05em;
-  }
-  nav .brand .dot{color:var(--hanko);}
-  nav ul{
-    list-style:none;
-    display:flex;
-    gap:28px;
-  }
-  nav a{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.72rem;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:var(--steel);
-    transition:color 0.2s;
-  }
-  nav a:hover{color:var(--ink);}
-  nav .menu-toggle{display:none;background:none;border:none;color:var(--ink);font-size:1.4rem;cursor:pointer;}
-
-  @media (max-width:720px){
-    nav ul{
-      position:fixed;
-      top:57px;left:0;right:0;
-      background:var(--bg);
-      border-bottom:1px solid var(--line);
-      flex-direction:column;
-      padding:20px 32px;
-      gap:16px;
-      display:none;
-    }
-    nav ul.open{display:flex;}
-    nav .menu-toggle{display:block;}
-  }
-
-  /* ---------- HERO ---------- */
-  .hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    position:relative;
-    padding:120px 0 80px;
-    border-bottom:1px solid var(--line);
-  }
-  .hero .wrap{
-    display:grid;
-    grid-template-columns:1fr auto;
-    gap:40px;
-    align-items:center;
-    width:100%;
-  }
-  .hero-title{
-    font-size:clamp(3.2rem, 9vw, 7.2rem);
-    line-height:0.92;
-  }
-  .hero-title .line2{color:var(--hanko);}
-  .hero-tagline{
-    margin-top:24px;
-    max-width:480px;
-    font-size:1.05rem;
-    color:var(--ink-dim);
-  }
-  .hero-meta{
-    margin-top:34px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-  }
-  .pill{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.72rem;
-    letter-spacing:0.04em;
-    padding:8px 14px;
-    border:1px solid var(--line);
-    color:var(--ink-dim);
-  }
-  .hero-links{
-    margin-top:34px;
-    display:flex;
-    gap:16px;
-    flex-wrap:wrap;
-  }
-  .btn{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.78rem;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    padding:14px 22px;
-    border:1px solid var(--ink);
-    transition:all 0.2s;
-    display:inline-block;
-  }
-  .btn:hover{background:var(--ink);color:var(--bg);}
-  .btn.primary{
-    background:var(--hanko);
-    border-color:var(--hanko);
-    color:var(--ink);
-  }
-  .btn.primary:hover{background:var(--hanko-dim);border-color:var(--hanko-dim);}
-
-  /* vertical japanese strip - real content, marks the journey */
-  .kanji-strip{
-    writing-mode:vertical-rl;
-    font-family:'Work Sans', sans-serif;
-    font-size:1.4rem;
-    letter-spacing:0.5em;
-    color:var(--steel);
-    justify-self:end;
-    padding-right:6px;
-  }
-  .kanji-strip strong{color:var(--hanko);font-weight:500;}
-  @media (max-width:720px){
-    .hero .wrap{grid-template-columns:1fr;}
-    .kanji-strip{display:none;}
-  }
-
-  /* ---------- SECTION SHELL ---------- */
-  section{
-    padding:100px 0;
-    border-bottom:1px solid var(--line);
-  }
-  .section-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    margin-bottom:56px;
-    gap:24px;
-    flex-wrap:wrap;
-  }
-  .section-title{
-    font-size:clamp(2rem, 4vw, 3rem);
-  }
-  .section-note{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.75rem;
-    color:var(--steel);
-    max-width:280px;
-    text-align:right;
-  }
-  @media (max-width:720px){
-    .section-note{text-align:left;}
-  }
-
-  /* ---------- JOURNEY (real chronological sequence -> numbered is justified) ---------- */
-  .timeline{
-    display:flex;
-    flex-direction:column;
-  }
-  .tl-item{
-    display:grid;
-    grid-template-columns:64px 100px 1fr;
-    gap:24px;
-    padding:26px 0;
-    border-top:1px solid var(--line);
-    align-items:start;
-  }
-  .tl-item:last-child{border-bottom:1px solid var(--line);}
-  .tl-num{
-    font-family:'Bebas Neue', sans-serif;
-    font-size:2rem;
-    color:var(--hanko-dim);
-  }
-  .tl-tag{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.72rem;
-    color:var(--steel);
-    padding-top:6px;
-  }
-  .tl-body h3{
-    font-family:'Bebas Neue', sans-serif;
-    font-size:1.4rem;
-    letter-spacing:0.02em;
-    text-transform:uppercase;
-    margin-bottom:8px;
-  }
-  .tl-body p{
-    color:var(--ink-dim);
-    font-size:0.95rem;
-    max-width:560px;
-  }
-  @media (max-width:600px){
-    .tl-item{grid-template-columns:40px 1fr;}
-    .tl-tag{grid-column:2;order:-1;padding-top:0;margin-bottom:4px;}
-  }
-
-  /* ---------- SKILLS ---------- */
-  .skill-groups{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:40px;
-  }
-  @media (max-width:800px){
-    .skill-groups{grid-template-columns:1fr;}
-  }
-  .skill-group h4{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.72rem;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--hanko);
-    margin-bottom:18px;
-    padding-bottom:10px;
-    border-bottom:1px solid var(--line);
-  }
-  .chip-row{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-  }
-  .chip{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.78rem;
-    padding:8px 13px;
-    border:1px solid var(--line);
-    color:var(--ink-dim);
-    transition:border-color 0.2s, color 0.2s;
-  }
-  .chip:hover{border-color:var(--hanko);color:var(--ink);}
-
-  /* ---------- PROJECTS ---------- */
-  .projects{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-  }
-  @media (max-width:720px){
-    .projects{grid-template-columns:1fr;}
-  }
-  .project-card{
-    background:var(--bg);
-    padding:36px;
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-    transition:background 0.25s;
-  }
-  .project-card:hover{background:var(--bg-raised);}
-  .project-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-  }
-  .project-num{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.72rem;
-    color:var(--steel);
-  }
-  .project-status{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.65rem;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    padding:4px 9px;
-    border:1px solid var(--hanko-dim);
-    color:var(--hanko);
-  }
-  .project-card h3{
-    font-family:'Bebas Neue', sans-serif;
-    font-size:1.7rem;
-    letter-spacing:0.02em;
-    text-transform:uppercase;
-  }
-  .project-card p{
-    color:var(--ink-dim);
-    font-size:0.92rem;
-  }
-  .project-tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:auto;
-    padding-top:10px;
-  }
-  .project-tags span{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.68rem;
-    color:var(--steel);
-  }
-  .project-tags span::before{content:"#";color:var(--hanko-dim);}
-  .project-link{
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.75rem;
-    color:var(--ink);
-    border-bottom:1px solid var(--hanko);
-    align-self:flex-start;
-    padding-bottom:2px;
-  }
-
-  /* ---------- CONTACT ---------- */
-  #contacto{border-bottom:none;}
-  .contact-grid{
-    display:grid;
-    grid-template-columns:1.2fr 1fr;
-    gap:60px;
-  }
-  @media (max-width:800px){
-    .contact-grid{grid-template-columns:1fr;}
-  }
-  .contact-lead{
-    font-family:'Bebas Neue', sans-serif;
-    font-size:clamp(2rem, 5vw, 3.2rem);
-    line-height:1.05;
-    text-transform:uppercase;
-  }
-  .contact-lead .accent{color:var(--hanko);}
-  .contact-list{
-    display:flex;
-    flex-direction:column;
-    gap:0;
-  }
-  .contact-list a{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 0;
-    border-top:1px solid var(--line);
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.9rem;
-    transition:padding-left 0.2s, color 0.2s;
-  }
-  .contact-list a:last-child{border-bottom:1px solid var(--line);}
-  .contact-list a:hover{padding-left:10px;color:var(--hanko);}
-  .contact-list a .arrow{color:var(--steel);}
-
-  footer{
-    padding:32px;
-    text-align:center;
-    font-family:'JetBrains Mono', monospace;
-    font-size:0.7rem;
-    color:var(--steel);
-    letter-spacing:0.04em;
-  }
-
-  /* ---------- reveal on scroll ---------- */
-  .reveal{
-    opacity:0;
-    transform:translateY(18px);
-    transition:opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.visible{
-    opacity:1;
-    transform:translateY(0);
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    .reveal{opacity:1;transform:none;transition:none;}
-  }
-
-  a:focus-visible, button:focus-visible{
-    outline:2px solid var(--hanko);
-    outline-offset:3px;
-  }
-</style>
-</head>
-<body>
-
-<header>
-  <nav>
-    <div class="brand">AXEL<span class="dot">.</span>DEV</div>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">≡</button>
-    <ul id="navList">
-      <li><a href="#recorrido">Recorrido</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="wrap">
-    <div>
-      <div class="eyebrow">Buenos Aires, AR · Disponible para roles junior</div>
-      <h1 class="hero-title display">
-        AXEL<br>
-        <span class="line2">CEBALLES</span>
-      </h1>
-      <p class="hero-tagline">De las herramientas al código. Diez años arreglando cosas con las manos — hoy construyo con lógica. En transición hacia soporte técnico, desarrollo y todo lo que se pueda automatizar.</p>
-      <div class="hero-meta">
-        <span class="pill">FULL STACK · ITBA / SANTANDER</span>
-        <span class="pill">SOPORTE TÉCNICO · IT</span>
-        <span class="pill">COMMUNITY MANAGEMENT</span>
-      </div>
-      <div class="hero-links">
-        <a class="btn primary" href="mailto:axelceballes9@gmail.com">Escribime</a>
-        <a class="btn" href="https://github.com/AxelCeballes" target="_blank" rel="noopener">GitHub ↗</a>
-        <a class="btn" href="https://www.linkedin.com/in/ceballesaxel79/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </div>
-    </div>
-    <div class="kanji-strip">職人からコードへ<strong>能</strong></div>
-  </div>
-</section>
-
-<section id="recorrido">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <div class="eyebrow">01 — Sobre mí</div>
-        <h2 class="section-title display">El recorrido</h2>
-      </div>
-      <p class="section-note">Del trabajo físico al trabajo técnico, sin pausar el laburo mientras aprendo.</p>
-    </div>
-
-    <div class="timeline">
-      <div class="tl-item reveal">
-        <div class="tl-num display">01</div>
-        <div class="tl-tag mono">2016 — 2025</div>
-        <div class="tl-body">
-          <h3>Oficio y trabajo físico</h3>
-          <p>Mantenimiento, construcción y hotelería: plomería, carpintería, pintura, instalación de TVs. Seguridad y trabajo como repositor. Manejo de Excel, atención al público, ventas y organización operativa en el día a día.</p>
-        </div>
-      </div>
-
-      <div class="tl-item reveal">
-        <div class="tl-num display">02</div>
-        <div class="tl-tag mono">2021 — 2025</div>
-        <div class="tl-body">
-          <h3>Primeros pasos en tecnología</h3>
-          <p>Curso de reparación de PC (2021) y curso de Community Manager en Coderhouse (2025). Empecé a ver la tecnología como un camino real, no solo un hobby.</p>
-        </div>
-      </div>
-
-      <div class="tl-item reveal">
-        <div class="tl-num display">03</div>
-        <div class="tl-tag mono">2026 — Hoy</div>
-        <div class="tl-body">
-          <h3>Full Stack y soporte IT</h3>
-          <p>Curso de Full Stack en ITBA / Santander. Formación en soporte técnico a través de Fundación Empujar y Fundación Pescar. Buscando mi primer rol en IT — Help Desk, QA o desarrollo — compatible con seguir estudiando.</p>
-        </div>
-      </div>
-
-      <div class="tl-item reveal">
-        <div class="tl-num display">04</div>
-        <div class="tl-tag mono">Próximo paso</div>
-        <div class="tl-body">
-          <h3>Ciberseguridad</h3>
-          <p>Una vez consolidado en soporte y desarrollo, quiero profundizar en ciberseguridad como dirección de largo plazo.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <div class="eyebrow">02 — Herramientas</div>
-        <h2 class="section-title display">Lo que uso</h2>
-      </div>
-      <p class="section-note">Aprendiendo rápido, sumando herramientas a medida que las proyectos las piden.</p>
-    </div>
-
-    <div class="skill-groups reveal">
-      <div class="skill-group">
-        <h4>Lenguajes</h4>
-        <div class="chip-row">
-          <span class="chip">JavaScript</span>
-          <span class="chip">Python</span>
-          <span class="chip">C#</span>
-          <span class="chip">HTML5</span>
-          <span class="chip">CSS3</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4>Herramientas</h4>
-        <div class="chip-row">
-          <span class="chip">Git / GitHub</span>
-          <span class="chip">VS Code</span>
-          <span class="chip">Visual Studio</span>
-          <span class="chip">Discord.js</span>
-          <span class="chip">Excel</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h4>Otras habilidades</h4>
-        <div class="chip-row">
-          <span class="chip">Community Management</span>
-          <span class="chip">Canva</span>
-          <span class="chip">Redes sociales</span>
-          <span class="chip">Atención al cliente</span>
-          <span class="chip">Inglés intermedio</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="proyectos">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <div class="eyebrow">03 — Trabajo</div>
-        <h2 class="section-title display">Proyectos</h2>
-      </div>
-      <p class="section-note">Código, marca y proyectos reales — no solo ejercicios de curso.</p>
-    </div>
-
-    <div class="projects reveal">
-      <div class="project-card">
-        <div class="project-top">
-          <span class="project-num mono">01</span>
-          <span class="project-status">En desarrollo</span>
-        </div>
-        <h3>Ondachic App</h3>
-        <p>App de gestión para el local de ropa de mi tía: carga lo que compra y lo que vende, y calcula ganancias y pérdidas en tiempo real.</p>
-        <div class="project-tags">
-          <span>gestión</span><span>inventario</span><span>negocio-real</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-top">
-          <span class="project-num mono">02</span>
-          <span class="project-status">Activo</span>
-        </div>
-        <h3>Kindsty</h3>
-        <p>Marca propia de indumentaria streetwear: remeras y bermudas boxy-fit con estética japonesa en blanco y negro. Producción, precios y marketing, de punta a punta.</p>
-        <div class="project-tags">
-          <span>marca</span><span>streetwear</span><span>marketing</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-top">
-          <span class="project-num mono">03</span>
-          <span class="project-status">GitHub</span>
-        </div>
-        <h3>Nova Ecommerce</h3>
-        <p>Proyecto de tienda online construido en HTML como práctica de estructura y maquetado para comercio electrónico.</p>
-        <div class="project-tags">
-          <span>html</span><span>ecommerce</span>
-        </div>
-        <a class="project-link" href="https://github.com/AxelCeballes/nova-ecommerce" target="_blank" rel="noopener">Ver repo ↗</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-top">
-          <span class="project-num mono">04</span>
-          <span class="project-status">GitHub</span>
-        </div>
-        <h3>Perfil de GitHub</h3>
-        <p>Todo mi código en un solo lugar: ejercicios, forks y los proyectos que voy sumando en el camino hacia IT.</p>
-        <div class="project-tags">
-          <span>portfolio</span><span>código</span>
-        </div>
-        <a class="project-link" href="https://github.com/AxelCeballes" target="_blank" rel="noopener">Ver GitHub ↗</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contacto">
-  <div class="wrap contact-grid">
-    <div class="reveal">
-      <div class="hanko-stamp" style="margin-bottom:24px;"><span>軸<br>AC</span></div>
-      <p class="contact-lead">Busco mi próximo<br><span class="accent">paso en IT.</span></p>
-      <p style="margin-top:20px;color:var(--ink-dim);max-width:400px;">Si tenés un rol de soporte técnico, QA o desarrollo junior — o simplemente querés charlar sobre tecnología — escribime.</p>
-    </div>
-    <div class="contact-list reveal">
-      <a href="mailto:axelceballes9@gmail.com"><span>Email</span><span class="arrow mono">axelceballes9@gmail.com ↗</span></a>
-      <a href="https://github.com/AxelCeballes" target="_blank" rel="noopener"><span>GitHub</span><span class="arrow mono">@AxelCeballes ↗</span></a>
-      <a href="https://www.linkedin.com/in/ceballesaxel79/" target="_blank" rel="noopener"><span>LinkedIn</span><span class="arrow mono">ceballesaxel79 ↗</span></a>
-      <a href="https://www.instagram.com/axelkrx/" target="_blank" rel="noopener"><span>Instagram</span><span class="arrow mono">@axelkrx ↗</span></a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  AXEL CEBALLES — BUENOS AIRES, ARGENTINA — 2026
-</footer>
-
-<script>
-  // mobile nav
-  const menuToggle = document.getElementById('menuToggle');
-  const navList = document.getElementById('navList');
-  menuToggle.addEventListener('click', () => navList.classList.toggle('open'));
-  navList.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navList.classList.remove('open')));
-
-  // scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-        io.unobserve(entry.target);
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Axel Omar Ceballes",
+        "jobTitle": "Desarrollador Web Full Stack",
+        "url": "https://portafolio-axelceballes.vercel.app/",
+        "image": "https://portafolio-axelceballes.vercel.app/og-image.png",
+        "email": "mailto:axelceballes9@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Buenos Aires",
+          "addressCountry": "AR"
+        },
+        "sameAs": [
+          "https://github.com/AxelCeballes",
+          "https://www.linkedin.com/in/ceballesaxel79/"
+        ],
+        "knowsAbout": [
+          "React",
+          "Node.js",
+          "Express",
+          "MongoDB Atlas",
+          "JavaScript",
+          "Python",
+          "Tailwind CSS",
+          "REST APIs",
+          "Linux",
+          "Soporte técnico"
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Instituto Tecnológico de Buenos Aires (ITBA)"
+        }
       }
-    });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => io.observe(el));
-</script>
-
-</body>
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
