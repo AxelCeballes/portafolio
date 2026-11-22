@@ -12,6 +12,14 @@
     {
       "source": "/CV-Axel-Ceballes.pdf",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]
+    },
+    {
+      "source": "/CV-Axel-Ceballes.txt",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }]
+    },
+    {
+      "source": "/projects/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, immutable" }]
     }
   ]
 }

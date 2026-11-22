@@ -41,6 +41,14 @@ export function About() {
               <Button href={profile.linkedin} variant="ghost" icon="arrow-up-right" external>
                 Ver LinkedIn
               </Button>
+              <a
+                href={profile.cvTextUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-center font-mono text-[10.5px] text-muted underline decoration-line underline-offset-4 transition-colors hover:text-accent"
+              >
+                Versión texto del CV (para formularios)
+              </a>
             </div>
           </Reveal>
 

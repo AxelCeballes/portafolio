@@ -1,0 +1,67 @@
+AXEL OMAR CEBALLES
+Desarrollador Web Full Stack
+
+Merlo, Buenos Aires, Argentina | +54 11 4023 6918
+axelceballes9@gmail.com | linkedin.com/in/ceballesaxel79 | github.com/AxelCeballes
+Portafolio: axelceballes.vercel.app
+
+RESUMEN PROFESIONAL
+Desarrollador Web Full Stack formado en ITBA, con experiencia en aplicaciones React y Node.js y bases de datos MongoDB. Construyo APIs REST, paneles administrativos y sistemas de gestión integrados con hardware (códigos de barras y NFC), y los dejo funcionando en producción. Perfil responsable, proactivo y adaptable, con experiencia previa en soporte técnico, operaciones y atención al cliente.
+
+HABILIDADES TÉCNICAS
+Frontend: HTML5, CSS3, JavaScript (ES6+), React, Vite, Tailwind CSS, diseño responsive.
+Backend: Node.js, Express, APIs REST, Python, autenticación de usuarios.
+Bases de datos: MongoDB, MongoDB Atlas, modelado y consultas.
+Herramientas: Git, GitHub, Vercel, Linux (CLI), despliegue en la nube.
+Integraciones: lectores de códigos de barras, tarjetas NFC, soporte técnico y diagnóstico de hardware.
+
+PROYECTOS DESTACADOS - 2026
+
+L.O.T.U.S. Solutions - Gestión industrial y control de pañol | FALMET
+Stack: React, Node.js, MongoDB, NFC, códigos de barras
+- Trazabilidad de herramientas y responsables por turno con códigos de barras y tarjetas NFC.
+- Asistencia de personal y panel operativo con métricas e integración de hardware.
+
+S.I.T.E.C. - Proyecto JACK SOLUTIONS
+Stack: React, Vite, APIs REST
+- Control de asistencia de personal e inventario de herramientas con panel administrativo en tiempo real y lectura de códigos de barras.
+
+Mueblería Jota v3 - E-commerce Full Stack
+Stack: React, Vite, Node.js, Express, MongoDB Atlas
+- Catálogo dinámico, carrito de compras y gestión de productos con base de datos en la nube.
+
+Alerta Vecinal 911 - PWA de emergencias
+Stack: JavaScript, Node.js, React Native / Expo
+- Alertas comunitarias, voluntarios cercanos y consola web de monitoreo para el centro de operaciones.
+
+NOVA E-commerce - Catálogo y carrito
+Stack: HTML5, CSS3, JavaScript, LocalStorage
+- Catálogo dinámico, buscador, detalle de producto, carrito persistido y formulario validado.
+
+EXPERIENCIA LABORAL
+
+Técnico de Mantenimiento / Operaciones
+Hoteles, Countries y Teatro Vorterix | octubre 2023 - junio 2026
+- Diagnóstico y resolución de incidencias en CasaSur Hotel, Bellini Hotel, Miraflores Country y Teatro Vorterix.
+- Coordinación de tareas bajo tiempos ajustados y seguimiento de solicitudes de clientes.
+
+Community Manager & Ventas
+Seguridad / Comercio Retail | abril 2023 - enero 2026
+- Gestión de canales digitales, creación de contenido y publicidad; atención al cliente y seguimiento de pedidos.
+- Control de stock, manejo de caja y cumplimiento de protocolos de seguridad.
+
+Repositor / Cajero / Atención al Cliente
+Supermercado Luna | diciembre 2021 - marzo 2023
+- Control de stock, rotación de productos y atención al público en horarios de alta exigencia.
+
+FORMACIÓN Y CERTIFICACIONES
+Desarrollo Web Full Stack - ITBA | Instituto Tecnológico de Buenos Aires | mayo - noviembre 2026
+Tecnicatura en Ciberseguridad | UNAHUR, Hurlingham | 2026 - actualidad
+Capacitación para la inserción laboral (140 h) | Fundación Empujar | agosto - diciembre 2026
+Community Manager - Coderhouse | junio - diciembre 2025
+Reparación de PC - Universidad Nacional del Oeste | 2021
+Bachiller en Ciencias Sociales - E.E.S. Nº41 | 2016 - 2021
+
+DATOS ADICIONALES
+Idiomas: Español (nativo) · Inglés (A2).
+Licencias: A.1.2 y B1.

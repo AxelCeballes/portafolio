@@ -8,6 +8,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/ceballesaxel79/',
   siteUrl: 'https://axelceballes.vercel.app/',
   cvUrl: '/CV-Axel-Ceballes.pdf',
+  cvTextUrl: '/CV-Axel-Ceballes.txt',
   availability: 'Disponible para proyectos y roles full time',
   education: 'Instituto Tecnológico de Buenos Aires (ITBA)',
   heroLead:
