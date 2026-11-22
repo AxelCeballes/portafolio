@@ -53,7 +53,7 @@ keyframes propios (`enter`, `glow`, `marquee`, `shimmer`, `blink`). Todo respeta
 │   ├── CV-Axel-Ceballes.pdf    # CV de una página
 │   ├── robots.txt
 │   ├── sitemap.xml
-│   └── projects/               # capturas WebP reales de los 6 proyectos
+│   └── projects/               # capturas WebP reales de los 5 proyectos
 ├── scripts/
 │   ├── og.html                 # fuente del OG image
 │   └── cv.html                 # fuente del CV (print to PDF)
@@ -118,7 +118,7 @@ Al pushear a `main`, Vercel reconstruye y publica automáticamente. Para un domi
 
 ### 1. Capturas de los proyectos
 
-Las seis tarjetas usan capturas reales de cada demo, guardadas en `public/projects/` como WebP
+Las cinco tarjetas usan capturas reales de cada demo, guardadas en `public/projects/` como WebP
 de 1280 × 720 (todas por debajo de 60 KB). `ProjectCover` mantiene los mockups CSS como fallback
 si un proyecto no tiene campo `image`.
 

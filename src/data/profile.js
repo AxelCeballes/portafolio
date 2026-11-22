@@ -74,7 +74,7 @@ export const highlights = [
 ];
 
 export const facts = [
-  { value: '6', label: 'Proyectos desplegados en 2026' },
+  { value: '5', label: 'Proyectos desplegados en 2026' },
   { value: 'Full Stack', label: 'React · Node.js · MongoDB' },
   { value: 'ITBA', label: 'Formación profesional' },
   { value: 'Merlo', label: 'Buenos Aires · Remoto' },
