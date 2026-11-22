@@ -90,18 +90,23 @@ npm run preview    # sirve dist/ en http://localhost:4173
 
 ## Formulario de contacto
 
-Por defecto el formulario abre el cliente de correo del visitante con el mensaje precargado
-(`mailto:`), por lo que funciona sin backend.
+El formulario envía el mensaje directo al correo sin abrir el cliente de correo del visitante.
+Por defecto usa [FormSubmit](https://formsubmit.co) con el endpoint AJAX basado en `profile.email`,
+así que no hace falta crear cuenta ni backend.
 
-Para recibir los mensajes directo en el inbox:
+**Activación (solo una vez):** la primera vez que se envíe el formulario, FormSubmit manda un mail a
+`axelceballes9@gmail.com` con un link *Activate Form*. Hay que hacer clic en ese link; desde ahí todos
+los mensajes llegan normalmente.
 
-1. Crear un formulario en [Formspree](https://formspree.io) (o cualquier API que acepte `POST` JSON).
-2. Copiar `.env.example` a `.env.local` y completar:
-   ```bash
-   VITE_CONTACT_ENDPOINT=https://formspree.io/f/TU_ID
-   ```
-3. Reiniciar el dev server. En Vercel, cargar la misma variable en
-   **Project → Settings → Environment Variables** y redeployar.
+Si se prefiere otro proveedor (Formspree, Resend, una API propia), copiar `.env.example` a `.env.local`
+y completar:
+
+```bash
+VITE_CONTACT_ENDPOINT=https://formspree.io/f/TU_ID
+```
+
+Esa variable tiene prioridad sobre FormSubmit. En Vercel cargarla en
+**Project → Settings → Environment Variables** y redeployar.
 
 ## Deploy en Vercel
 

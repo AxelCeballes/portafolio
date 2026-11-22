@@ -13,10 +13,6 @@ const feedback = {
     tone: 'success',
     text: '¡Mensaje enviado! Gracias por escribirme, te respondo a la brevedad.',
   },
-  mailto: {
-    tone: 'info',
-    text: 'Abrimos tu cliente de correo con el mensaje listo para enviar.',
-  },
   invalid: {
     tone: 'error',
     text: 'Completá nombre, email y mensaje para continuar.',
@@ -38,7 +34,11 @@ export function Contact() {
   const [status, setStatus] = useState('idle');
   const [copied, setCopied] = useState(false);
 
-  const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT?.trim();
+  // FormSubmit funciona sin crear cuenta: el primer envío activa el formulario
+  // por mail. Si se configura VITE_CONTACT_ENDPOINT, ese endpoint tiene prioridad.
+  const endpoint =
+    import.meta.env.VITE_CONTACT_ENDPOINT?.trim() ||
+    `https://formsubmit.co/ajax/${profile.email}`;
   const sending = status === 'sending';
   const message = feedback[status];
 
@@ -77,24 +77,27 @@ export function Contact() {
       return;
     }
 
-    if (!endpoint) {
-      const subject = encodeURIComponent(`Contacto desde el portafolio — ${name}`);
-      const content = encodeURIComponent(`${body}\n\n— ${name}\n${email}`);
-      window.location.href = `mailto:${profile.email}?subject=${subject}&body=${content}`;
-      setStatus('mailto');
-      return;
-    }
-
     setStatus('sending');
 
     try {
       const response = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ name, email, message: body, _subject: `Portafolio — ${name}` }),
+        body: JSON.stringify({
+          name,
+          email,
+          message: body,
+          _replyto: email,
+          _subject: `Portafolio — ${name}`,
+          _template: 'table',
+          _captcha: 'false',
+        }),
       });
 
-      if (!response.ok) throw new Error('Request failed');
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || String(result.success).toLowerCase() === 'false') {
+        throw new Error(result.message || 'Request failed');
+      }
 
       setStatus('success');
       setValues(initialValues);
