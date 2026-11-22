@@ -53,7 +53,7 @@ keyframes propios (`enter`, `glow`, `marquee`, `shimmer`, `blink`). Todo respeta
 │   ├── CV-Axel-Ceballes.pdf    # CV de una página
 │   ├── robots.txt
 │   ├── sitemap.xml
-│   └── projects/               # (opcional) capturas reales de los proyectos
+│   └── projects/               # capturas WebP reales de los 6 proyectos
 ├── scripts/
 │   ├── og.html                 # fuente del OG image
 │   └── cv.html                 # fuente del CV (print to PDF)
@@ -118,17 +118,20 @@ Al pushear a `main`, Vercel reconstruye y publica automáticamente. Para un domi
 
 ### 1. Capturas de los proyectos
 
-Las tarjetas ya incluyen portadas generadas con CSS (mockups de cada sistema), así que el sitio se
-ve completo sin imágenes. Para usar capturas reales:
+Las seis tarjetas usan capturas reales de cada demo, guardadas en `public/projects/` como WebP
+de 1280 × 720 (todas por debajo de 60 KB). `ProjectCover` mantiene los mockups CSS como fallback
+si un proyecto no tiene campo `image`.
 
-1. Guardar la imagen panorámica 16:9 en `public/projects/`, por ejemplo `lotus.png`.
+Para agregar la captura de un proyecto nuevo:
+
+1. Guardar la imagen panorámica 16:9 en `public/projects/`, por ejemplo `nuevo-proyecto.webp`.
 2. Agregar el campo `image` al proyecto en `src/data/projects.js`:
    ```js
-   image: '/projects/lotus.png',
+   image: '/projects/nuevo-proyecto.webp',
    ```
-3. La tarjeta usa la captura y mantiene el mockup como fallback.
+3. La tarjeta usa la captura automáticamente.
 
-Sugerido: 1440 × 810 px, PNG o WebP, menos de 300 KB.
+Sugerido: 1280 × 720 px o 1440 × 810 px, WebP o PNG, menos de 300 KB.
 
 ### 2. CV
 

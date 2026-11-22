@@ -174,7 +174,7 @@ export function Projects() {
           index="02"
           eyebrow="Trabajo"
           title="Proyectos reales, en producción."
-          description="Sistemas que resuelven operaciones concretas: control de pañol, asistencia, inventario y e-commerce."
+          description="Sistemas que resuelven operaciones concretas: control de pañol, asistencia, inventario, e-commerce y alertas comunitarias."
         />
 
         {featured ? (
