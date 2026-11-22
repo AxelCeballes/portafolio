@@ -34,7 +34,7 @@ function CodeCard() {
             <p className="pl-4">
               <span className="text-accent">base</span>
               <span className="text-muted">:</span>{' '}
-              <span className="text-rose-200/85">'Buenos Aires, AR'</span>
+              <span className="text-rose-200/85">'Merlo, Buenos Aires'</span>
               <span className="text-muted">,</span>
             </p>
             <p className="pl-4">

@@ -1,7 +1,7 @@
 # Portafolio — Axel Omar Ceballes
 
 Sitio personal y portafolio profesional de **Axel Omar Ceballes**, Desarrollador Web Full Stack
-(Buenos Aires, Argentina).
+(Merlo, Buenos Aires, Argentina).
 
 > Rediseño completo del sitio anterior: se reemplazó el `index.html` monolítico por una aplicación
 > React + Vite con componentes reutilizables, Tailwind CSS v4 y contenido centralizado en datos.

@@ -6,7 +6,7 @@ export const projects = [
     tagline: 'Gestión industrial y control de pañol',
     client: 'FALMET',
     status: 'En producción',
-    year: '2025',
+    year: '2026',
     featured: true,
     cover: 'lotus',
     accent: 'from-red-500/25 via-rose-600/15 to-transparent',
@@ -27,7 +27,7 @@ export const projects = [
     name: 'S.I.T.E.C. — JACK SOLUTIONS',
     tagline: 'Asistencia e inventario en tiempo real',
     status: 'Desplegado',
-    year: '2025',
+    year: '2026',
     cover: 'sitec',
     accent: 'from-rose-500/22 via-red-700/12 to-transparent',
     description:
@@ -42,7 +42,7 @@ export const projects = [
     name: 'Mueblería Jota v3',
     tagline: 'E-commerce Full Stack con catálogo dinámico',
     status: 'Desplegado',
-    year: '2025',
+    year: '2026',
     cover: 'muebleria',
     accent: 'from-orange-500/20 via-red-600/12 to-transparent',
     description:

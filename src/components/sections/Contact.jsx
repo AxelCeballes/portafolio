@@ -168,7 +168,7 @@ export function Contact() {
               </div>
               <p className="mt-2 text-sm text-ink/90">{profile.availability}</p>
               <p className="mt-1 font-mono text-[10px] text-muted/70">
-                Buenos Aires · Remoto / Híbrido · GMT-3
+                Merlo, Buenos Aires · Remoto / Híbrido · GMT-3
               </p>
             </div>
           </Reveal>

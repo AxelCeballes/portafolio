@@ -9,12 +9,12 @@
       body {
         width: 210mm;
         min-height: 297mm;
-        padding: 14mm 15mm;
+        padding: 10mm 12mm;
         background: #fff;
         color: #101828;
         font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
-        font-size: 9.6pt;
-        line-height: 1.45;
+        font-size: 8.9pt;
+        line-height: 1.36;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -22,48 +22,50 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 12mm;
-        padding-bottom: 4mm;
+        gap: 8mm;
+        padding-bottom: 3mm;
         border-bottom: 2px solid #dc2626;
       }
-      h1 { font-size: 24pt; line-height: 1; letter-spacing: -0.02em; }
-      .role { margin-top: 1.6mm; color: #b91c1c; font-size: 10.5pt; font-weight: 600; }
-      .contact { text-align: right; font-size: 8.6pt; color: #475467; line-height: 1.7; }
+      h1 { font-size: 22pt; line-height: 1; letter-spacing: -0.025em; }
+      .role { margin-top: 1.4mm; color: #b91c1c; font-size: 10.5pt; font-weight: 700; }
+      .contact { text-align: right; font-size: 8pt; color: #475467; line-height: 1.6; }
       .contact strong { color: #101828; }
-      .summary { margin-top: 4mm; color: #344054; font-size: 9.4pt; }
-      .section { margin-top: 5mm; }
+      .summary { margin-top: 3mm; color: #344054; font-size: 8.8pt; }
+      .section { margin-top: 3.4mm; break-inside: avoid; }
       .section h2 {
-        font-size: 9pt;
-        letter-spacing: 0.12em;
+        font-size: 8.5pt;
+        letter-spacing: 0.13em;
         text-transform: uppercase;
         color: #b91c1c;
-        padding-bottom: 1.2mm;
+        padding-bottom: 1mm;
         border-bottom: 1px solid #d0d5dd;
-        margin-bottom: 2.6mm;
+        margin-bottom: 2mm;
       }
-      .job { margin-bottom: 3.2mm; }
-      .job-head { display: flex; justify-content: space-between; gap: 6mm; }
-      .job-title { font-weight: 700; font-size: 10pt; }
-      .job-meta { color: #b91c1c; font-size: 8.5pt; font-weight: 600; white-space: nowrap; }
-      .job ul { margin: 1mm 0 0 4mm; }
-      .job li { margin-bottom: 0.6mm; color: #344054; }
-      .tags { color: #667085; font-size: 8.4pt; margin-top: 0.6mm; }
-      .cols { display: flex; gap: 8mm; }
+      .job { margin-bottom: 2.3mm; break-inside: avoid; }
+      .job:last-child { margin-bottom: 0; }
+      .job-head { display: flex; justify-content: space-between; gap: 5mm; }
+      .job-title { font-weight: 700; font-size: 9.3pt; }
+      .job-meta { color: #b91c1c; font-size: 8pt; font-weight: 700; white-space: nowrap; }
+      .job ul { margin: 0.6mm 0 0 3.5mm; }
+      .job li { margin-bottom: 0.3mm; color: #344054; }
+      .tags { color: #667085; font-size: 7.9pt; margin-top: 0.5mm; }
+      .cols { display: flex; gap: 9mm; }
       .col { flex: 1; }
-      .skill-row { display: flex; gap: 2.5mm; margin-bottom: 1.8mm; font-size: 8.8pt; }
-      .skill-row strong { width: 26mm; flex-shrink: 0; color: #101828; }
+      .skill-row { display: flex; gap: 2mm; margin-bottom: 1.1mm; font-size: 8.2pt; }
+      .skill-row strong { width: 23mm; flex-shrink: 0; color: #101828; }
       .skill-row span { color: #475467; }
-      .edu { margin-bottom: 2.2mm; }
-      .edu strong { font-size: 9.6pt; }
-      .edu p { color: #475467; font-size: 8.8pt; }
+      .edu { margin-bottom: 1.5mm; break-inside: avoid; }
+      .edu:last-child { margin-bottom: 0; }
+      .edu strong { font-size: 8.8pt; }
+      .edu p { color: #475467; font-size: 8pt; }
       .foot {
-        margin-top: 5mm;
-        padding-top: 2mm;
+        margin-top: 4mm;
+        padding-top: 1.6mm;
         border-top: 1px solid #d0d5dd;
         display: flex;
         justify-content: space-between;
         color: #98a2b3;
-        font-size: 7.8pt;
+        font-size: 7.5pt;
       }
       a { color: inherit; text-decoration: none; }
     </style>
@@ -75,30 +77,46 @@
         <div class="role">Desarrollador Web Full Stack</div>
       </div>
       <div class="contact">
-        <strong>Buenos Aires, Argentina</strong><br />
+        <strong>Merlo, Buenos Aires · +54 11 4023 6918</strong><br />
         axelceballes9@gmail.com<br />
-        github.com/AxelCeballes<br />
-        linkedin.com/in/ceballesaxel79
+        github.com/AxelCeballes · linkedin.com/in/ceballesaxel79<br />
+        axelceballes.vercel.app
       </div>
     </div>
 
     <p class="summary">
-      Desarrollador Full Stack con formación en ITBA y experiencia construyendo software a medida,
-      sistemas de gestión e interfaces modernas. Relevo procesos operativos, diseño la solución
-      junto al usuario y la dejo funcionando en producción con React, Node.js y MongoDB.
+      Desarrollador Web Full Stack formado en ITBA, con experiencia en aplicaciones React + Node.js y
+      bases de datos MongoDB. Construyo APIs REST, paneles administrativos y sistemas de gestión
+      integrados con hardware (códigos de barras y NFC), y los dejo funcionando en producción.
+      Perfil responsable, proactivo y adaptable, con experiencia previa en soporte técnico,
+      operaciones y atención al cliente.
     </p>
 
     <section class="section">
-      <h2>Proyectos destacados</h2>
+      <h2>Stack técnico</h2>
+      <div class="cols">
+        <div class="col">
+          <div class="skill-row"><strong>Frontend</strong><span>HTML5, CSS3, JavaScript (ES6+), React, Vite, Tailwind CSS, diseño responsive</span></div>
+          <div class="skill-row"><strong>Backend</strong><span>Node.js, Express, APIs REST, Python, autenticación de usuarios</span></div>
+        </div>
+        <div class="col">
+          <div class="skill-row"><strong>Datos</strong><span>MongoDB, MongoDB Atlas, modelado y consultas</span></div>
+          <div class="skill-row"><strong>Herramientas</strong><span>Git, GitHub, Vercel, Linux (CLI), despliegue en la nube</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Proyectos destacados · 2026</h2>
 
       <div class="job">
         <div class="job-head">
-          <span class="job-title">L.O.T.U.S. Solutions — Sistema de gestión industrial</span>
-          <span class="job-meta">FALMET · 2025</span>
+          <span class="job-title">L.O.T.U.S. Solutions — Gestión industrial y control de pañol</span>
+          <span class="job-meta">FALMET · 2026</span>
         </div>
         <ul>
-          <li>Control de pañol y trazabilidad de herramientas con códigos de barras y tarjetas NFC.</li>
-          <li>Asistencia de personal y panel operativo con métricas; integración de hardware y asistencia con IA.</li>
+          <li>Trazabilidad de herramientas y responsables por turno con códigos de barras y tarjetas NFC.</li>
+          <li>Asistencia de personal y panel operativo con métricas e integración de hardware.</li>
         </ul>
         <div class="tags">React · Node.js · MongoDB · NFC · Lectores de códigos de barras</div>
       </div>
@@ -106,11 +124,10 @@
       <div class="job">
         <div class="job-head">
           <span class="job-title">S.I.T.E.C. — Proyecto JACK SOLUTIONS</span>
-          <span class="job-meta">2025</span>
+          <span class="job-meta">2026</span>
         </div>
         <ul>
-          <li>Plataforma de control de asistencia de personal e inventario de herramientas.</li>
-          <li>Panel administrativo en tiempo real con lectura de códigos de barras.</li>
+          <li>Control de asistencia de personal e inventario de herramientas con panel administrativo en tiempo real y lectura de códigos de barras.</li>
         </ul>
         <div class="tags">React · Vite · APIs REST</div>
       </div>
@@ -118,7 +135,7 @@
       <div class="job">
         <div class="job-head">
           <span class="job-title">Mueblería Jota v3 — E-commerce Full Stack</span>
-          <span class="job-meta">2025</span>
+          <span class="job-meta">2026</span>
         </div>
         <ul>
           <li>Catálogo dinámico, carrito de compras y gestión de productos con base de datos en la nube.</li>
@@ -128,41 +145,84 @@
     </section>
 
     <section class="section">
-      <h2>Stack técnico</h2>
+      <h2>Experiencia laboral</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-title">Técnico de Mantenimiento / Operaciones — Hoteles, Countries y Teatro Vorterix</span>
+          <span class="job-meta">oct 2023 – jun 2026</span>
+        </div>
+        <ul>
+          <li>Diagnóstico y resolución de incidencias en CasaSur Hotel, Bellini Hotel, Miraflores Country y Teatro Vorterix.</li>
+          <li>Coordinación de tareas bajo tiempos ajustados y seguimiento de solicitudes de clientes.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-title">Community Manager &amp; Ventas — Seguridad / Comercio Retail</span>
+          <span class="job-meta">abr 2023 – ene 2026</span>
+        </div>
+        <ul>
+          <li>Gestión de canales digitales, creación de contenido y publicidad; atención al cliente y seguimiento de pedidos.</li>
+          <li>Control de stock, manejo de caja y cumplimiento de protocolos de seguridad.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-title">Repositor / Cajero / Atención al Cliente — Supermercado Luna</span>
+          <span class="job-meta">dic 2021 – mar 2023</span>
+        </div>
+        <ul>
+          <li>Control de stock, rotación de productos y atención al público en horarios de alta exigencia.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Formación y certificaciones</h2>
       <div class="cols">
         <div class="col">
-          <div class="skill-row"><strong>Frontend</strong><span>HTML5, CSS3, JavaScript (ES6+), React, Vite, Tailwind CSS, diseño responsive</span></div>
-          <div class="skill-row"><strong>Backend</strong><span>Node.js, Express, APIs REST, Python</span></div>
+          <div class="edu">
+            <strong>Desarrollo Web Full Stack — ITBA</strong>
+            <p>Instituto Tecnológico de Buenos Aires · may – nov 2026</p>
+          </div>
+          <div class="edu">
+            <strong>Tecnicatura en Ciberseguridad</strong>
+            <p>UNAHUR, Hurlingham · 2026 – actualidad</p>
+          </div>
+          <div class="edu">
+            <strong>Capacitación para la inserción laboral (140 h)</strong>
+            <p>Fundación Empujar · ago – dic 2026</p>
+          </div>
         </div>
         <div class="col">
-          <div class="skill-row"><strong>Bases de datos</strong><span>MongoDB Atlas</span></div>
-          <div class="skill-row"><strong>Herramientas</strong><span>Git, GitHub, Vercel, Linux (Kali / CLI)</span></div>
-          <div class="skill-row"><strong>Soporte</strong><span>Soporte técnico y diagnóstico de hardware</span></div>
+          <div class="edu">
+            <strong>Community Manager — Coderhouse</strong>
+            <p>jun – dic 2025</p>
+          </div>
+          <div class="edu">
+            <strong>Reparación de PC — Universidad Nacional del Oeste</strong>
+            <p>2021</p>
+          </div>
+          <div class="edu">
+            <strong>Bachiller en Ciencias Sociales — E.E.S. Nº41</strong>
+            <p>2016 – 2021</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2>Formación</h2>
-      <div class="cols">
-        <div class="col">
-          <div class="edu">
-            <strong>Desarrollo Web Full Stack</strong>
-            <p>Instituto Tecnológico de Buenos Aires (ITBA)</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="edu">
-            <strong>Idiomas</strong>
-            <p>Español nativo · Inglés intermedio</p>
-          </div>
-        </div>
-      </div>
+      <h2>Datos adicionales</h2>
+      <div class="skill-row"><strong>Idiomas</strong><span>Español (nativo) · Inglés (A2)</span></div>
+      <div class="skill-row"><strong>Licencias</strong><span>A.1.2 y B1</span></div>
     </section>
 
     <div class="foot">
       <span>Portafolio: axelceballes.vercel.app</span>
-      <span>Axel Omar Ceballes · Buenos Aires, Argentina</span>
+      <span>Axel Omar Ceballes · Merlo, Buenos Aires · Actualizado 11/2026</span>
     </div>
   </body>
 </html>

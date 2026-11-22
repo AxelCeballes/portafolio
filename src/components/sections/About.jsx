@@ -24,7 +24,7 @@ export function About() {
             ))}
 
             <div className="flex flex-wrap gap-2 pt-2">
-              {['Buenos Aires, AR', 'ITBA', 'Remoto / Híbrido', 'Full time'].map((tag) => (
+              {['Merlo, Buenos Aires', 'ITBA', 'Remoto / Híbrido', 'Full time'].map((tag) => (
                 <span
                   key={tag}
                   className="rounded-full border border-line bg-white/[0.02] px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider text-muted"

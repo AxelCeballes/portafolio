@@ -2,7 +2,7 @@ export const profile = {
   name: 'Axel Omar Ceballes',
   shortName: 'Axel Ceballes',
   role: 'Desarrollador Web Full Stack',
-  location: 'Buenos Aires, Argentina',
+  location: 'Merlo, Buenos Aires',
   email: 'axelceballes9@gmail.com',
   github: 'https://github.com/AxelCeballes',
   linkedin: 'https://www.linkedin.com/in/ceballesaxel79/',
@@ -15,7 +15,7 @@ export const profile = {
   heroSupport:
     'Trabajo con React, Node.js y MongoDB construyendo sistemas de gestión, paneles en tiempo real y e-commerce que se usan todos los días en producción.',
   summary: [
-    'Soy Axel Omar Ceballes, desarrollador web Full Stack radicado en Buenos Aires. Mi formación en el Instituto Tecnológico de Buenos Aires (ITBA) y mi recorrido técnico me llevaron a construir sistemas de gestión, control de inventario, asistencia de personal y herramientas internas que reemplazan planillas y procesos manuales.',
+    'Soy Axel Omar Ceballes, desarrollador web Full Stack de Merlo, Buenos Aires. Mi formación en el Instituto Tecnológico de Buenos Aires (ITBA) y mi recorrido técnico me llevaron a construir sistemas de gestión, control de inventario, asistencia de personal y herramientas internas que reemplazan planillas y procesos manuales.',
     'Mi forma de trabajar combina criterio operativo con desarrollo: relevo el proceso actual, detecto dónde se pierde tiempo y diseño la solución junto al usuario. Documento cada entrega, acompaño la puesta en marcha y la ajusto con datos de uso reales.',
   ],
 };
@@ -51,13 +51,13 @@ export const highlights = [
     icon: 'graduation',
     title: 'Formación ITBA',
     description:
-      'Desarrollo Web Full Stack en el Instituto Tecnológico de Buenos Aires. Frontend, backend, bases de datos y despliegue.',
+      'Desarrollo Web Full Stack en el Instituto Tecnológico de Buenos Aires (2026). Frontend, backend, bases de datos y despliegue.',
   },
   {
     icon: 'cpu',
-    title: 'Hardware y operaciones',
+    title: 'Operaciones y soporte',
     description:
-      'Diagnóstico técnico, mantenimiento, Linux y experiencia integrando lectores de códigos de barras y tarjetas NFC con software.',
+      'Experiencia en mantenimiento y soporte técnico (2023–2026), Linux e integración de lectores de códigos de barras y tarjetas NFC con software.',
   },
   {
     icon: 'layers',
@@ -65,11 +65,17 @@ export const highlights = [
     description:
       'Sistemas de gestión, paneles administrativos en tiempo real y e-commerce con base de datos en la nube.',
   },
+  {
+    icon: 'shield',
+    title: 'Ciberseguridad en formación',
+    description:
+      'Tecnicatura en Ciberseguridad en UNAHUR (en curso) y 140 horas de capacitación en Fundación Empujar.',
+  },
 ];
 
 export const facts = [
-  { value: '3', label: 'Proyectos desplegados' },
+  { value: '3', label: 'Proyectos desplegados en 2026' },
   { value: 'Full Stack', label: 'React · Node.js · MongoDB' },
   { value: 'ITBA', label: 'Formación profesional' },
-  { value: 'Buenos Aires', label: 'Argentina · Remoto' },
+  { value: 'Merlo', label: 'Buenos Aires · Remoto' },
 ];
