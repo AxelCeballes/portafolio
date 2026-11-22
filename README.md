@@ -135,11 +135,9 @@ Sugerido: 1280 × 720 px o 1440 × 810 px, WebP o PNG, menos de 300 KB.
 
 ### 2. CV
 
-`public/CV-Axel-Ceballes.pdf` es un CV de una página generado desde `scripts/cv.html`. Está pensado
-para systems ATS: una sola columna, fuente Arial, sin tablas ni encabezados de impresión, para que
-el texto se extraiga en el orden correcto. `public/CV-Axel-Ceballes.txt` es la misma info en texto
-plano para pegar en formularios de postulación. Reemplazalos manteniendo los nombres, o regenerá el
-PDF:
+`public/CV-Axel-Ceballes.pdf` es un CV de una página generado desde `scripts/cv.html` con los datos
+del perfil. Reemplazalo por tu versión final manteniendo el mismo nombre de archivo, o regeneralo:
+`public/CV-Axel-Ceballes.txt` es una copia en texto plano por si querés pegarla en formularios.
 
 ```powershell
 & "C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new --no-sandbox --disable-gpu `
